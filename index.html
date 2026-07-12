@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alguien Especial 🐾🌹✨</title>
+    <style>
+        /* Fuentes de estilo clásico/medieval */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+        :root {
+            --medieval-gold: #cfa846;
+            --medieval-warm: #5c3222; /* Color cálido principal (terracota / café clásico) */
+            --parchment: #fcf6e8;
+            --dark-wood: #2c1a13;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Fondo degradado cálido y acogedor tipo biblioteca medieval a la luz de las velas */
+            background: radial-gradient(circle, #4e2b1f 0%, #29140c 100%);
+            color: var(--parchment);
+            font-family: 'Lora', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* --- EFECTO DE FUEGOS ARTIFICIALES GIGANTES --- */
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .firework-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            opacity: 1;
+            /* Destello multicapa masivo e intenso */
+            box-shadow: 0 0 10px #fff, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px currentColor;
+            animation: fireworks-giant 2.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+        }
+
+        @keyframes fireworks-giant {
+            0% {
+                transform: translate(0, 0) scale(1.5);
+                opacity: 1;
+            }
+            70% {
+                opacity: 0.9;
+            }
+            100% {
+                /* Dispersión gigante y caída lenta */
+                transform: translate(var(--x), var(--y)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* --- JARDÍN MÁGICO DE TULIPANES Y GIRASOLES --- */
+        .garden-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 140px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        .flower {
+            font-size: 3.5rem;
+            display: inline-block;
+            transform-origin: bottom center;
+            /* Animación de crecimiento al cargar y luego balanceo sutil */
+            animation: growFlower 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
+                       swayFlower 4s ease-in-out infinite alternate;
+            opacity: 0;
+        }
+
+        @keyframes growFlower {
+            0% { transform: scale(0) translateY(100px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 0.85; }
+        }
+
+        @keyframes swayFlower {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+
+        /* --- CONTENEDORES PRINCIPALES --- */
+        .container {
+            width: 90%;
+            max-width: 650px;
+            perspective: 1000px;
+            z-index: 10;
+            margin: 20px auto;
+            margin-bottom: 120px; /* Espacio para que no tape las flores de abajo */
+        }
+
+        /* Tarjeta / Pergamino */
+        .parchment-card {
+            background-color: var(--parchment);
+            color: var(--dark-wood);
+            padding: 40px 30px;
+            border: 8px double var(--medieval-gold);
+            border-radius: 4px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.6), inset 0 0 40px rgba(184, 134, 11, 0.2);
+            text-align: center;
+            position: relative;
+            /* Cambio de sección simple y limpio mediante opacidad */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Marcos y detalles medievales sutiles en los bordes */
+        .parchment-card::before, .parchment-card::after {
+            content: "🐾";
+            position: absolute;
+            font-size: 20px;
+            color: var(--medieval-warm);
+            opacity: 0.4;
+        }
+        .parchment-card::before { top: 15px; left: 15px; }
+        .parchment-card::after { bottom: 15px; right: 15px; }
+
+        .hidden {
+            display: none !important;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        /* --- TEXTOS --- */
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--medieval-warm);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--medieval-gold);
+            padding-bottom: 10px;
+        }
+
+        .romantic-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: justify;
+            font-style: italic;
+        }
+
+        .poetry-style {
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            text-align: left;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        .quote-box {
+            background: rgba(92, 50, 34, 0.08);
+            border-left: 4px solid var(--medieval-warm);
+            border-right: 4px solid var(--medieval-warm);
+            padding: 15px;
+            margin: 25px 0;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--medieval-warm);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        /* --- BOTONES Y ANIMACIONES --- */
+        .btn {
+            background: var(--medieval-warm);
+            color: var(--parchment);
+            border: 2px solid var(--medieval-gold);
+            font-family: 'Cinzel', serif;
+            padding: 12px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: #733f2b;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(207, 168, 70, 0.5);
+        }
+
+        /* Animación del Botón Carta */
+        .btn-envelope {
+            position: relative;
+            padding: 15px 35px;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); box-shadow: 0 0 20px var(--medieval-gold); }
+            100% { transform: scale(1); }
+        }
+
+        /* Botón de regreso (Flecha) */
+        .back-arrow {
+            background: none;
+            border: none;
+            color: var(--medieval-warm);
+            font-size: 2rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .back-arrow:hover {
+            transform: scale(1.2) translateX(-5px);
+            color: #733f2b;
+        }
+
+        .flex-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .cat-icon {
+            font-size: 2rem;
+            color: var(--medieval-warm);
+            margin: 10px 0;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor de los fuegos artificiales gigantes -->
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <!-- Contenedor del jardín inferior (Tulipanes y Girasoles) -->
+    <div class="garden-container" id="gardenContainer"></div>
+
+    <div class="container">
+        
+        <!-- SECCIÓN 1: EL PRINCIPIO / LA INVITACIÓN -->
+        <div class="parchment-card" id="seccion1">
+            <span class="cat-icon">🐈‍⬛ ⚜️ 🐈</span>
+            <h2>Un Mensaje para Ti</h2>
+            <p class="romantic-text">
+                Hola, espero que estés bien, te mando este pequeño mensaje para decirte que eres una gran persona, que me estoy enamorando de ti cada día más y ya no sé cómo no verte pues, el resplandor de tus ojos, la dulzura de tu voz y la perfección de tu sonrisa me tienen hechizado.
+            </p>
+            <button class="btn btn-envelope" onclick="cambiarSeccionSimple('seccion1', 'seccion2')">
+                ✉️ Abrir Mensaje 🌹✨
+            </button>
+        </div>
+
+        <!-- SECCIÓN 2: EL MENSAJE ABIERTO -->
+        <div class="parchment-card hidden" id="seccion2">
+            <span class="cat-icon">📜</span>
+            <p class="romantic-text" style="text-align: center; font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: var(--medieval-warm); font-weight: bold;">
+                Las palabras son la mejor forma de comunicación.<br>
+                “Te amo”. ”Te quiero”. “Te adoro”<br>
+                ¿De qué me sirve todo eso…<br>
+                Si no te tengo a mi lado?
+            </p>
+            
+            <div class="flex-buttons">
+                <a href="https://youtu.be/43i_BrEg120?si=jS15TogX9SAtwghC" target="_blank" class="btn">🎵 Una canción especial</a>
+                <button class="btn" onclick="cambiarSeccionSimple('seccion2', 'seccion3')">📜 Un poema especial</button>
+            </div>
+
+            <button class="back-arrow" onclick="cambiarSeccionSimple('seccion2', 'seccion1')">←</button>
+        </div>
+
+        <!-- SECCIÓN 3: EL POEMA Y EL FINAL -->
+        <div class="parchment-card hidden" id="seccion3">
+            <h2>Para la Chica más Increíble 🌹</h2>
+            
+            <div class="poetry-style">
+                Quiero que sepas que hay algo en ti que me encanta. Tu sonrisa tiene una forma muy especial de alegrar cualquier momento, tus ojos transmiten una tranquilidad que me hace perderme en ellos y tu cabello simplemente resalta lo hermosa que eres.
+                <br>
+                Pero más allá de lo bonita que eres por fuera, me gustaría conocer a la persona que llevas dentro, descubrir tus sueños, tus gustos y todo aquello que te hace ser tú.
+                <br>
+                Me encantaría seguir conociéndote, compartir momentos contigo y, si la vida nos da la oportunidad, crecer y salir adelante juntos, apoyándonos en cada paso. Eres una chica increíble y espero que esto sea solo el comienzo de una historia llena de sonrisas, confianza y momentos inolvidables.
+            </div>
+
+            <!-- Recuadro del final (Cita de Bleach) -->
+            <div class="quote-box">
+                “Me pregunto si puedo aguantar la velocidad del mundo sin ti”.
+                <br>
+                <span style="font-size: 0.8rem; display:block; text-align: right; margin-top: 5px;">— Bleach</span>
+            </div>
+
+            <!-- Flecha para regresar al apartado anterior -->
+            <button class="back-arrow" onclick="cambiarSeccionSimple('seccion3', 'seccion2')">←</button>
+        </div>
+
+    </div>
+
+    <script>
+        // --- LÓGICA DE FUEGOS ARTIFICIALES MASIVOS Y PAUSADOS ---
+        const fireworksContainer = document.getElementById('fireworksContainer');
+        const fireworkColors = ['#ff0055', '#ff9f1c', '#00f5d4', '#e0aaff', '#ff5400', '#ffffff', '#ff007f', '#ffb703']; 
+
+        function createFirework() {
+            // Explosiones más altas y espaciadas
+            const xBase = Math.random() * 80 + 10; 
+            const yBase = Math.random() * 45 + 10; 
+            const explosionColor = fireworkColors[Math.floor(Math.random() * fireworkColors.length)];
+            
+            // Cantidad enorme de partículas para un destello gigante
+            const numParticles = 80; 
+
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('firework-particle');
+                
+                particle.style.left = xBase + 'vw';
+                particle.style.top = yBase + 'vh';
+                particle.style.color = explosionColor;
+                particle.style.backgroundColor = explosionColor; 
+                
+                const angle = Math.random() * Math.PI * 2;
+                // Radio de expansión gigante aumentadísimo
+                const distance = Math.random() * 45 + 5; 
+                
+                particle.style.setProperty('--x', Math.cos(angle) * distance + 'vw');
+                // Simulación física de caída por gravedad elegante
+                particle.style.setProperty('--y', (Math.sin(angle) * distance + 15) + 'vh');
+
+                fireworksContainer.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 2500); 
+            }
+        }
+
+        // Ritmo más lento y calmado: Una hermosa explosión gigante cada 1.5 segundos
+        setInterval(createFirework, 1500); 
+
+        // --- LÓGICA DEL JARDÍN INFERIOR ANIMADO ---
+        const gardenContainer = document.getElementById('gardenContainer');
+        const flowers = ['🌷', '🌻', '🌷', '🌻', '🌷', '🌻', '🌷', '🌻'];
+
+        function buildGarden() {
+            // Rellenamos el jardín inferior con flores intercaladas automáticamente
+            flowers.forEach((flowerChar, index) => {
+                const flowerSpan = document.createElement('span');
+                flowerSpan.classList.add('flower');
+                flowerSpan.innerText = flowerChar;
+                
+                // Retrasos escalonados para que broten una por una de forma hermosa
+                flowerSpan.style.animationDelay = `${index * 0.2}s, ${2 + index * 0.1}s`;
+                
+                // Variación sutil en el balanceo para que no se muevan todas exactamente igual
+                if (index % 2 === 0) {
+                    flowerSpan.style.animationDuration = '2s, 3.5s';
+                } else {
+                    flowerSpan.style.animationDuration = '2s, 4.5s';
+                }
+
+                gardenContainer.appendChild(flowerSpan);
+            });
+        }
+
+        // Construir las flores al cargar
+        buildGarden();
+
+        // --- LÓGICA DE NAVEGACIÓN SIMPLE (Desvanecimiento Elegante) ---
+        function cambiarSeccionSimple(idOcultar, idMostrar) {
+            const capaOcultar = document.getElementById(idOcultar);
+            const capaMostrar = document.getElementById(idMostrar);
+
+            // Transición suave de opacidad hacia afuera
+            capaOcultar.style.opacity = '0';
+            
+            setTimeout(() => {
+                capaOcultar.classList.add('hidden');
+                
+                capaMostrar.classList.remove('hidden');
+                void capaMostrar.offsetWidth; // Forzar lectura física
+                
+                capaMostrar.style.opacity = '1';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
