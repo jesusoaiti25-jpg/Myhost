@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Canvas | Neko Studios Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="bg-ink-canvas"></canvas>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-box">
+                    <!-- LOGO PRINCIPAL -->
+                    <img src="img/logo.png" alt="Neko Studios Logo">
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-title">NEKO.<span>ANIMATION</span></span>
+                    <span class="logo-subtitle">STUDIOS B2B</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="proceso.html" class="active">Behind the Canvas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://www.instagram.com/neko.studios.anim?psln=MWt5MWM5dGRpaHljZQ==" target="_blank" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@neko_studios4?_r=1&_t=ZS-9AoLyNBTis8" target="_blank" class="social-icon-btn"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="contacto.html" class="btn-header">Cotizar Proyecto</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-left">
+            <div class="badge-tag">
+                <span class="badge-dot"></span>
+                Pilar Transparencia
+            </div>
+            <h1 class="hero-main-title">
+                Mostramos el proceso tras <span class="text-gradient">Cada Render</span>
+            </h1>
+            <p class="hero-description">
+                Documentamos nuestras composiciones, bocetos y desgloses de averías VFX para respaldar la alta calidad artística y certidumbre en las fechas de entrega.
+            </p>
+        </div>
+
+        <div class="hero-right">
+            <!-- Comparador Deslizable con Imágenes -->
+            <div style="position: relative; width: 100%; height: 320px; border-radius: 28px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);" id="vfxComparator">
+                <!-- IMAGEN CAPA WIREFRAME / SKETCH -->
+               
+                    <img src="img/vfx.jpg" alt="Render Final VFX" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section style="max-width: 1280px; margin: 0 auto; padding: 2rem 2rem 5rem 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+            <div style="background: #ffffff; padding: 1.8rem; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                <span style="color: var(--primary-magenta); font-weight: 800; font-size: 1.2rem;">01.</span>
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0.5rem 0;">Conceptualización</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Guion técnico y Storyboard alineado a los objetivos de Inbound B2B.</p>
+            </div>
+
+            <div style="background: #ffffff; padding: 1.8rem; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                <span style="color: var(--primary-purple); font-weight: 800; font-size: 1.2rem;">02.</span>
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0.5rem 0;">Desarrollo Visual</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Modelado 3D, animación 2D y entintado de estilo según la marca.</p>
+            </div>
+
+            <div style="background: #ffffff; padding: 1.8rem; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                <span style="color: var(--primary-cyan); font-weight: 800; font-size: 1.2rem;">03.</span>
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0.5rem 0;">Composición & VFX</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Efectos especiales, iluminación, física de partículas y Render 4K.</p>
+            </div>
+
+            <div style="background: #ffffff; padding: 1.8rem; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                <span style="color: var(--primary-magenta); font-weight: 800; font-size: 1.2rem;">04.</span>
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0.5rem 0;">Entrega & Métricas</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Publicación del Demo Reel y documentación "Behind the Canvas".</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-container" style="margin-bottom: 1rem;">
+                    <div class="logo-box">
+                        <!-- LOGO FOOTER -->
+                        <img src="img/logo.png" alt="Neko Studios Logo">
+                    </div>
+                    <span class="logo-title" style="color: #ffffff;">NEKO. <span style="color: var(--primary-magenta);">STUDIOS</span></span>
+                </div>
+                <p>Estudio especializado en animación 2D, 3D, VFX y Motion Graphics para marcas y agencias B2B.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="proceso.html">Behind the Canvas</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Sede San Juan del Río</h4>
+                <p>Querétaro, México.</p>
+                <p>Prospección y entrega a nivel internacional.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Neko Studios Animation. Todos los derechos reservados.</p>
+            <div>
+                <a href="https://www.instagram.com/neko.studios.anim?psln=MWt5MWM5dGRpaHljZQ==" target="_blank" style="margin-right: 1rem; color: #64748b;"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@neko_studios4?_r=1&_t=ZS-9AoLyNBTis8" target="_blank" style="color: #64748b;"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const comp = document.getElementById('vfxComparator');
+        const layer = document.getElementById('vfxRenderLayer');
+        comp.addEventListener('mousemove', (e) => {
+            const rect = comp.getBoundingClientRect();
+            const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+            layer.style.width = `${percentage}%`;
+        });
+    </script>
+
+</body>
+</html>

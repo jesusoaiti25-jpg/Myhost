@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Neko Studios Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+
+    <canvas id="bg-ink-canvas"></canvas>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-box">
+                    <!-- LOGO PRINCIPAL -->
+                    <img src="img/logo.png" alt="Neko Studios Logo">
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-title">NEKO.<span>ANIMATION</span></span>
+                    <span class="logo-subtitle">STUDIOS B2B</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="proceso.html">Behind the Canvas</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://www.instagram.com/neko.studios.anim?psln=MWt5MWM5dGRpaHljZQ==" target="_blank" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@neko_studios4?_r=1&_t=ZS-9AoLyNBTis8" target="_blank" class="social-icon-btn"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="contacto.html" class="btn-header">Cotizar Proyecto</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        
+        <div class="hero-left">
+            <div class="badge-tag">
+                <span class="badge-dot"></span>
+                Atención B2B Directa
+            </div>
+
+            <h1 class="hero-main-title">
+                Inicia tu proyecto de <span class="text-gradient">Animación B2B</span>
+            </h1>
+
+            <p class="hero-description">
+                Completa el formulario para recibir una propuesta estructurada para tu empresa o agencia.
+            </p>
+
+            <div class="form-card">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa / Agencia B2B</label>
+                        <input type="text" id="empresa" class="form-control" placeholder="Nombre de la empresa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Corporativo</label>
+                        <input type="email" id="email" class="form-control" placeholder="correo@empresa.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Detalles del Proyecto</label>
+                        <textarea id="mensaje" class="form-control" rows="4" placeholder="Plazos, requerimientos o ideas principales..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-hero-primary" style="width: 100%;">
+                        Enviar Solicitud <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <div id="statusMsg" style="margin-top: 1rem; color: var(--primary-magenta); font-weight: 700; text-align: center;"></div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div style="background: #ffffff; padding: 2.2rem; border-radius: 24px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card); margin-bottom: 2rem;">
+                <h4 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem;">Sede de Producción</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">San Juan del Río, Querétaro, México.</p>
+                <p style="color: var(--primary-purple); font-weight: 700; margin-top: 0.5rem; font-size: 0.88rem;">Atención Local e Internacional B2B</p>
+            </div>
+
+            <div style="background: #ffffff; padding: 2.2rem; border-radius: 24px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                <h4 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem;">Nuestras Redes Oficiales</h4>
+                
+                <div class="social-list-contact">
+                    <a href="https://www.instagram.com/neko.studios.anim?psln=MWt5MWM5dGRpaHljZQ==" target="_blank" class="social-link-card">
+                        <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Oficial
+                    </a>
+                    
+                    <a href="https://www.tiktok.com/@neko_studios4?_r=1&_t=ZS-9AoLyNBTis8" target="_blank" class="social-link-card">
+                        <i class="fa-brands fa-tiktok" style="color: #000000;"></i> TikTok Oficial
+                    </a>
+
+                    <a href="https://youtube.com/@neko_studios_animation?si=kYUt8owNnJD9rWgn" target="_blank" class="social-link-card">
+                        <i class="fa-brands fa-youtube" style="color: #ff0000;"></i> YouTube Oficial
+                    </a>
+
+                    <a href="https://www.facebook.com/share/1cncJ7fBp2/" target="_blank" class="social-link-card">
+                        <i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Oficial
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-container" style="margin-bottom: 1rem;">
+                    <div class="logo-box">
+                        <!-- LOGO FOOTER -->
+                        <img src="img/logo.png" alt="Neko Studios Logo">
+                    </div>
+                    <span class="logo-title" style="color: #ffffff;">NEKO. <span style="color: var(--primary-magenta);">STUDIOS</span></span>
+                </div>
+                <p>Estudio especializado en animación 2D, 3D, VFX y Motion Graphics para marcas y agencias B2B.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="proceso.html">Behind the Canvas</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Sede San Juan del Río</h4>
+                <p>Querétaro, México.</p>
+                <p>Prospección y entrega a nivel internacional.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Neko Studios Animation. Todos los derechos reservados.</p>
+            <div>
+                <a href="https://www.instagram.com/neko.studios.anim?psln=MWt5MWM5dGRpaHljZQ==" target="_blank" style="margin-right: 1rem; color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@neko_studios4?_r=1&_t=ZS-9AoLyNBTis8" target="_blank" style="margin-right: 1rem; color: #64748b;"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@neko_studios_animation?si=kYUt8owNnJD9rWgn" target="_blank" style="margin-right: 1rem; color: #64748b;"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/share/1cncJ7fBp2/" target="_blank" style="color: #64748b;"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                empresa: document.getElementById('empresa').value,
+                email: document.getElementById('email').value,
+                mensaje: document.getElementById('mensaje').value
+            };
+            const encrypted = CryptoJS.AES.encrypt(JSON.stringify(data), 'NekoKey2026').toString();
+            console.log('Payload Cifrado:', encrypted);
+            document.getElementById('statusMsg').innerText = '✓ Solicitud enviada correctamente.';
+            this.reset();
+        });
+    </script>
+</body>
+</html>
